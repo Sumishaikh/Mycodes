@@ -12,9 +12,6 @@ public class Create {
 		try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcpractice?useSSL=false&autoReconnect=true", "root",
 				"root")) {
 
-			// since execute return resultset so after creating table it is not returnign
-			// anything
-
 			Statement createStatement = connection.createStatement();
 
 			int query = createStatement.executeUpdate("create table orders(oid int,name varchar(20))");
